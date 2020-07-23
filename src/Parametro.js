@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dimensions } from 'react-native'
 
- let State = {
+ let Parametro = {
     blockSize: 30,
     borderSize: 5,
     fontSize: 15,
@@ -18,4 +18,4 @@ import { Dimensions } from 'react-native'
     }
 }
 
-export default State;
+export default Parametro;

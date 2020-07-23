@@ -1,11 +1,5 @@
-import React from 'react'
-import {
-    View,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    Modal
-} from 'react-native'
+import React from 'react';
+import {View, StyleSheet, Text, TouchableOpacity, Modal} from 'react-native';
 
 export default props => {
     return (

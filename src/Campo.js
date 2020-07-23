@@ -1,17 +1,24 @@
 import React from 'react'
-import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native'
+import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
 import Minas from "./Minas";
 import Bandeira from "./Bandeira";
-import State from "../State";
+import Parametro from "./Parametro";
 
 export default props => {
-    const { mined, opened, nearMines, exploded, flagged } = props
-
-    const styleField = [styles.field]
-    if (opened) styleField.push(styles.opened)
-    if (exploded) styleField.push(styles.exploded)
-    if (flagged) styleField.push(styles.flagged)
-    if (!opened && !exploded) styleField.push(styles.regular)
+    const { mined, opened, nearMines, exploded, flagged } = props;
+    const styleField = [styles.field];
+    if (opened) {
+        styleField.push(styles.opened)
+    }
+    if (exploded) {
+        styleField.push(styles.exploded)
+    }
+    if (flagged) {
+        styleField.push(styles.flagged)
+    }
+    if (!opened && !exploded) {
+        styleField.push(styles.regular)
+    }
 
     let color = null
     if (nearMines > 0) {
@@ -37,9 +44,9 @@ export default props => {
 
 const styles = StyleSheet.create({
     field: {
-        height: State.blockSize,
-        width: State.blockSize,
-        borderWidth: State.borderSize,
+        height: Parametro.blockSize,
+        width: Parametro.blockSize,
+        borderWidth: Parametro.borderSize,
     },
     regular: {
         backgroundColor: '#999',
@@ -56,7 +63,7 @@ const styles = StyleSheet.create({
     },
     label: {
         fontWeight: 'bold',
-        fontSize: State.fontSize,
+        fontSize: Parametro.fontSize,
     },
     exploded: {
         backgroundColor: 'red',
